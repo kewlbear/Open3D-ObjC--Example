@@ -3,17 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4C92B21C267ABC5600D4C515 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C92B21B267ABC5600D4C515 /* AppDelegate.m */; };
 		4C92B21F267ABC5600D4C515 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C92B21E267ABC5600D4C515 /* SceneDelegate.m */; };
-		4C92B222267ABC5600D4C515 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C92B221267ABC5600D4C515 /* ViewController.m */; };
+		4C92B222267ABC5600D4C515 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C92B221267ABC5600D4C515 /* ViewController.mm */; };
 		4C92B225267ABC5600D4C515 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C92B223267ABC5600D4C515 /* Main.storyboard */; };
 		4C92B227267ABC5700D4C515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C92B226267ABC5700D4C515 /* Assets.xcassets */; };
 		4C92B22A267ABC5700D4C515 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C92B228267ABC5700D4C515 /* LaunchScreen.storyboard */; };
 		4C92B22D267ABC5700D4C515 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C92B22C267ABC5700D4C515 /* main.m */; };
+		4C92B235267ABCB300D4C515 /* Open3D-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = 4C92B234267ABCB300D4C515 /* Open3D-iOS */; };
+		4C92B237267ABE9500D4C515 /* fragment.ply in Resources */ = {isa = PBXBuildFile; fileRef = 4C92B236267ABE9500D4C515 /* fragment.ply */; };
+		4C92B23B267ADB2600D4C515 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C92B23A267ADB2600D4C515 /* SceneKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,12 +26,14 @@
 		4C92B21D267ABC5600D4C515 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		4C92B21E267ABC5600D4C515 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		4C92B220267ABC5600D4C515 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4C92B221267ABC5600D4C515 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4C92B221267ABC5600D4C515 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		4C92B224267ABC5600D4C515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C92B226267ABC5700D4C515 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C92B229267ABC5700D4C515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C92B22B267ABC5700D4C515 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C92B22C267ABC5700D4C515 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C92B236267ABE9500D4C515 /* fragment.ply */ = {isa = PBXFileReference; lastKnownFileType = file; path = fragment.ply; sourceTree = "<group>"; };
+		4C92B23A267ADB2600D4C515 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C92B23B267ADB2600D4C515 /* SceneKit.framework in Frameworks */,
+				4C92B235267ABCB300D4C515 /* Open3D-iOS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +54,7 @@
 			children = (
 				4C92B219267ABC5600D4C515 /* Open3D-ObjC++-Example */,
 				4C92B218267ABC5600D4C515 /* Products */,
+				4C92B239267ADB2600D4C515 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,14 +74,23 @@
 				4C92B21D267ABC5600D4C515 /* SceneDelegate.h */,
 				4C92B21E267ABC5600D4C515 /* SceneDelegate.m */,
 				4C92B220267ABC5600D4C515 /* ViewController.h */,
-				4C92B221267ABC5600D4C515 /* ViewController.m */,
+				4C92B221267ABC5600D4C515 /* ViewController.mm */,
 				4C92B223267ABC5600D4C515 /* Main.storyboard */,
 				4C92B226267ABC5700D4C515 /* Assets.xcassets */,
 				4C92B228267ABC5700D4C515 /* LaunchScreen.storyboard */,
 				4C92B22B267ABC5700D4C515 /* Info.plist */,
 				4C92B22C267ABC5700D4C515 /* main.m */,
+				4C92B236267ABE9500D4C515 /* fragment.ply */,
 			);
 			path = "Open3D-ObjC++-Example";
+			sourceTree = "<group>";
+		};
+		4C92B239267ADB2600D4C515 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C92B23A267ADB2600D4C515 /* SceneKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +100,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C92B230267ABC5700D4C515 /* Build configuration list for PBXNativeTarget "Open3D-ObjC++-Example" */;
 			buildPhases = (
+				4C92B238267AC29300D4C515 /* ShellScript */,
 				4C92B213267ABC5600D4C515 /* Sources */,
 				4C92B214267ABC5600D4C515 /* Frameworks */,
 				4C92B215267ABC5600D4C515 /* Resources */,
@@ -92,6 +110,9 @@
 			dependencies = (
 			);
 			name = "Open3D-ObjC++-Example";
+			packageProductDependencies = (
+				4C92B234267ABCB300D4C515 /* Open3D-iOS */,
+			);
 			productName = "Open3D-ObjC++-Example";
 			productReference = 4C92B217267ABC5600D4C515 /* Open3D-ObjC++-Example.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +139,9 @@
 				Base,
 			);
 			mainGroup = 4C92B20E267ABC5600D4C515;
+			packageReferences = (
+				4C92B233267ABCB300D4C515 /* XCRemoteSwiftPackageReference "Open3D-iOS" */,
+			);
 			productRefGroup = 4C92B218267ABC5600D4C515 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -135,17 +159,38 @@
 				4C92B22A267ABC5700D4C515 /* LaunchScreen.storyboard in Resources */,
 				4C92B227267ABC5700D4C515 /* Assets.xcassets in Resources */,
 				4C92B225267ABC5600D4C515 /* Main.storyboard in Resources */,
+				4C92B237267ABE9500D4C515 /* fragment.ply in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C92B238267AC29300D4C515 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C92B213267ABC5600D4C515 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C92B222267ABC5600D4C515 /* ViewController.m in Sources */,
+				4C92B222267ABC5600D4C515 /* ViewController.mm in Sources */,
 				4C92B21C267ABC5600D4C515 /* AppDelegate.m in Sources */,
 				4C92B22D267ABC5700D4C515 /* main.m in Sources */,
 				4C92B21F267ABC5600D4C515 /* SceneDelegate.m in Sources */,
@@ -225,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -292,6 +337,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/include/open3d/3rdparty";
 				INFOPLIST_FILE = "Open3D-ObjC++-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +356,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/include/open3d/3rdparty";
 				INFOPLIST_FILE = "Open3D-ObjC++-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -342,6 +391,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C92B233267ABCB300D4C515 /* XCRemoteSwiftPackageReference "Open3D-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kewlbear/Open3D-iOS.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C92B234267ABCB300D4C515 /* Open3D-iOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C92B233267ABCB300D4C515 /* XCRemoteSwiftPackageReference "Open3D-iOS" */;
+			productName = "Open3D-iOS";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4C92B20F267ABC5600D4C515 /* Project object */;
 }
